@@ -14,5 +14,8 @@ Route::post('/tasks', [TaskController::class, 'store']);
 Route::put('/tasks/{task}', [TaskController::class, 'update']);
 Route::delete('/tasks/{task}', [TaskController::class, 'destroy']);
 
-
+// Rota para a documentação do Swagger
+Route::get('/api/documentation', function () {
+    return view('swagger-l5::index');
+});
 
